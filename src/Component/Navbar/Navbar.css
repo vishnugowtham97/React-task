@@ -21,6 +21,7 @@
   margin-right: 0;
 }
 
+/* Targeting the link tag */
 .navbar-container li a {
   text-decoration: none;
   color: #000000;

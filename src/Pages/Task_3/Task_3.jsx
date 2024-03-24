@@ -4,10 +4,14 @@ import User from "../../Component/Users/Users";
 import { getUsers } from "../../Component/Api/Api";
 
 function Task_3() {
+  // State to track the current page number
   const [page, setPage] = useState(1);
+  // State to indicate if users are currently being loaded
   const [users, setUsers] = useState([]);
+  // State to indicate if users are currently being loaded
   const [loading, setLoading] = useState(true);
 
+  // Functoion to handle the scroll events
   const handleScroll = (event) => {
     const { scrollTop, clientHeight, scrollHeight } = event.currentTarget;
 
@@ -15,7 +19,7 @@ function Task_3() {
       setPage((prev) => prev + 1);
     }
   };
-
+  // Fetch users when the component mounts or the page changes
   useEffect(() => {
     const loadUsers = async () => {
       setLoading(true);
@@ -29,8 +33,10 @@ function Task_3() {
 
   return (
     <div className="App">
+      {/* Title */}
       <h1>Infinite Scrolling</h1>
       <h4>Company employee Email lists </h4>
+      {/* Container for the scrollable content */}
       <div className="content" onScroll={handleScroll}>
         {users && users.map((user) => <User key={user.cell} user={user} />)}
       </div>

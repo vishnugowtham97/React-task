@@ -11,8 +11,14 @@ import Task_3 from "./Pages/Task_3/Task_3";
 function App() {
   return (
     <>
+      {/* Navbar component for navigation */}
+
       <Navbar />
+
+      {/* Routes defined using React Router */}
+
       <Routes>
+        {/* Define routes for different pages */}
         <Route path="/" element={<Task_1 />} />
         <Route path="task-2" element={<Task_2 />} />
         <Route path="task-3" element={<Task_3 />} />

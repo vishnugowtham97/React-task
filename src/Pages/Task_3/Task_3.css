@@ -1,3 +1,6 @@
+/* Taak_3 css */
+
+/* Scroll bar style */
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -13,6 +16,7 @@
   background: #555;
 }
 
+/* Styling the content */
 .content {
   display: grid;
   grid-template-columns: 1fr 1fr;

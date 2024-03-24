@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import "./Task_4.css";
 
 const Task_4 = () => {
+  // State for boxes, hit index, score, time left, and game over status
   const [boxes, setBoxes] = useState(Array(9).fill(""));
   const [hitIndex, setHitIndex] = useState(null);
   const [score, setScore] = useState(0);
   const [timeLeft, setTimeLeft] = useState(60);
   const [gameOver, setGameOver] = useState(false);
 
+  // Timer effect to decrement timeLeft every second
   useEffect(() => {
     const timer = setInterval(() => {
       if (timeLeft > 0) {
@@ -21,6 +23,7 @@ const Task_4 = () => {
     return () => clearInterval(timer);
   }, [timeLeft]);
 
+  // Hit interval effect to set random hit index every 2 seconds
   useEffect(() => {
     const hitInterval = setInterval(() => {
       const newHitIndex = Math.floor(Math.random() * 9);
@@ -33,6 +36,7 @@ const Task_4 = () => {
     return () => clearInterval(hitInterval);
   }, []);
 
+  // Handler for box click
   const handleBoxClick = (index) => {
     if (!gameOver) {
       if (index === hitIndex) {
@@ -43,6 +47,7 @@ const Task_4 = () => {
     }
   };
 
+  // Handler for restart button click
   const handleRestart = () => {
     setGameOver(false);
     setTimeLeft(60);
@@ -63,7 +68,9 @@ const Task_4 = () => {
 
   return (
     <div className="game-container">
+      {/* Titke */}
       <h1>Game</h1>
+      {/* To display the active score with timer  */}
       <div className="score">Score: {score}</div>
       <div className="timer">Time Left: {timeLeft} seconds</div>
       {gameOver && (

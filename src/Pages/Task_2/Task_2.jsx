@@ -2,11 +2,13 @@ import React from "react";
 import NestedList from "../../Component/NestedList/NestedList";
 
 const Task_2 = () => {
+  // Each item has an id, name, and children array it has nested items
   const data = [
     {
       id: 1,
       name: "Desktop",
       children: [
+        // Nested item
         {
           id: 2,
           name: "Documents",
@@ -99,6 +101,7 @@ const Task_2 = () => {
       id: 43,
       name: "Movies",
       children: [
+        // Nested item
         {
           id: 44,
           name: "Fun-Comedy",
@@ -145,8 +148,10 @@ const Task_2 = () => {
 
   return (
     <div>
+      {/* Title */}
       <h1>Nested List Component</h1>
       <h3>click the item view </h3>
+      {/* Render the NestedList component and pass the data */}
       <NestedList data={data} />
     </div>
   );

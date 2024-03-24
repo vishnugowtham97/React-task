@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import "./NestedList.css";
 
 const NestedList = ({ data }) => {
+  // State to track expanded nodes
   const [expandedNodes, setExpandedNodes] = useState([]);
 
+  // Function to toggle expansion of nodes
   const toggleNode = (nodeId) => {
+    // If node is expanded, collapse it; otherwise, expand it
     if (expandedNodes.includes(nodeId)) {
       setExpandedNodes(expandedNodes.filter((node) => node !== nodeId));
     } else {
@@ -37,7 +40,7 @@ const NestedList = ({ data }) => {
       </ul>
     );
   };
-
+  // Render the nested list component
   return <div className="nested-list">{renderNestedList(data)}</div>;
 };
 

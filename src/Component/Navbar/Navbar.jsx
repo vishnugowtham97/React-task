@@ -6,6 +6,7 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <ul>
+        {/* List items for each task with corresponding links */}
         <li>
           <Link to="/">Task-1</Link>
         </li>
