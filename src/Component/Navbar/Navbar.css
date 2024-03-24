@@ -1,0 +1,29 @@
+.navbar-container {
+  position: sticky;
+  top: 0;
+  background-color: whitesmoke;
+  z-index: 1000;
+  padding: 10px;
+}
+
+.navbar-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-container li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navbar-container li:last-child {
+  margin-right: 0;
+}
+
+.navbar-container li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 500;
+}

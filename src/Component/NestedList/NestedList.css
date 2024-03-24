@@ -1,0 +1,62 @@
+.nested-list {
+  font-family: Arial, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.node {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.caret {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+  margin-right: 5px;
+  transition: transform 0.2s;
+}
+
+.caret.open {
+  transform: rotate(90deg);
+}
+
+.folder-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  background-image: url("../../assets/299060_folder_icon.png");
+  background-size: contain;
+}
+
+.file-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  background-image: url("../../assets/299060_folder_icon.png");
+  background-size: contain;
+}
+
+.name {
+  width: 120px;
+}
+
+ul.level-0 {
+  padding-left: 0;
+}
+
+ul.level-1 {
+  padding-left: 125px;
+}
+
+ul.level-2 {
+  padding-left: 140px;
+}
