@@ -1,4 +1,9 @@
 /* Task_1 css */
+.cont-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 
 .container {
   display: flex;
@@ -6,11 +11,13 @@
   padding: 20px;
 }
 
-.bucket {
+.bucket,
+.bucket-1,
+.bucket-2 {
   border: 2px solid #ccc;
   padding: 10px;
   width: 200px;
-  height: 300px;
+  height: max-content;
   overflow-y: auto;
   transition: all 0.3s ease;
 }
@@ -63,6 +70,11 @@
 }
 
 /* Buttons */
+.btn-container {
+  display: flex;
+  flex-direction: column;
+}
+
 button {
   background-color: #4070f4;
   color: #fff;

@@ -81,47 +81,49 @@ const Task_1 = () => {
   return (
     <div>
       <h3>Element Transfer </h3>
-      <div className="bucket-1">
-        <h3 className="head">Bucket 1</h3>
-        <p>Please select the elements to move to Bucket 2</p>
-        <p>
-          {bucket1.map((element, index) => (
-            <p
-              key={index}
-              onClick={() => handleSelectElement(element)}
-              className={selectedElements.includes(element) ? "selected" : ""}
-            >
-              <button className="btn-element">{element}</button>
-            </p>
-          ))}
-        </p>
-      </div>
-      <div>
-        <button onClick={handleAddToBucket2}>Add Selected to Bucket 2</button>
-        <button onClick={handleRemoveFromBucket2}>
-          Remove Selected from Bucket 2
-        </button>
-        <button onClick={handleAddAllToBucket2}>Add All to Bucket 2</button>
-      </div>
-      <div className="bucket-2">
-        <h3 className="head">Bucket 2</h3>
-        <p>Please select the element to remove from Bucket 2</p>
-        <p>
-          {bucket2.map((element, index) => (
-            <p
-              key={index}
-              onClick={() => handleSelectElement(element)}
-              className={selectedElements.includes(element) ? "selected" : ""}
-            >
-              <button className="btn-element">{element}</button>
-            </p>
-          ))}
-        </p>
-      </div>
-      <div>
-        <button onClick={handleRemoveAllFromBucket2}>
-          Remove All from Bucket 2
-        </button>
+      <div className="cont-flex">
+        <div className="bucket-1">
+          <h3 className="head">Bucket 1</h3>
+          <p>Please select the elements to move to Bucket 2</p>
+          <p>
+            {bucket1.map((element, index) => (
+              <p
+                key={index}
+                onClick={() => handleSelectElement(element)}
+                className={selectedElements.includes(element) ? "selected" : ""}
+              >
+                <button className="btn-element">{element}</button>
+              </p>
+            ))}
+          </p>
+        </div>
+        <div className="btn-container">
+          <button onClick={handleAddToBucket2}>Add Selected to Bucket 2</button>
+          <button onClick={handleRemoveFromBucket2}>
+            Remove Selected from Bucket 2
+          </button>
+          <button onClick={handleAddAllToBucket2}>Add All to Bucket 2</button>
+
+          <button onClick={handleRemoveAllFromBucket2}>
+            Remove All from Bucket 2
+          </button>
+        </div>
+        <div className="bucket-2">
+          <h3 className="head">Bucket 2</h3>
+          <p>Please select the element to remove from Bucket 2</p>
+          <p>
+            {bucket2.map((element, index) => (
+              <p
+                key={index}
+                onClick={() => handleSelectElement(element)}
+                className={selectedElements.includes(element) ? "selected" : ""}
+              >
+                <button className="btn-element">{element}</button>
+              </p>
+            ))}
+          </p>
+        </div>
+        <div></div>
       </div>
     </div>
   );
