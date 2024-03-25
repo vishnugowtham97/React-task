@@ -67,6 +67,7 @@ button {
   background-color: #4070f4;
   color: #fff;
   border: none;
+  border-radius: 25px;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
@@ -76,4 +77,16 @@ button {
 
 button:hover {
   background-color: #3056b2;
+}
+
+.btn-element {
+  background: transparent;
+  color: black;
+}
+
+.btn-element:hover {
+  background-color: #fff;
+  border: 1px solid #4070f4;
+  color: green;
+  border-radius: 25px;
 }

@@ -4,12 +4,12 @@ import "./Task_1.css";
 const Task_1 = () => {
   // State for buckets
   const [bucket1, setBucket1] = useState([
-    "Element 1",
-    "Element 2",
-    "Element 3",
-    "Element 4",
+    "Item 1",
+    "Item 2",
+    "Item 3",
+    "Item 4",
   ]);
-  const [bucket2, setBucket2] = useState([]);
+  const [bucket2, setBucket2] = useState(["Item 5", "Item 6"]);
 
   const [selectedElements, setSelectedElements] = useState([]);
 
@@ -91,7 +91,7 @@ const Task_1 = () => {
               onClick={() => handleSelectElement(element)}
               className={selectedElements.includes(element) ? "selected" : ""}
             >
-              {element}
+              <button className="btn-element">{element}</button>
             </p>
           ))}
         </p>
@@ -113,7 +113,7 @@ const Task_1 = () => {
               onClick={() => handleSelectElement(element)}
               className={selectedElements.includes(element) ? "selected" : ""}
             >
-              {element}
+              <button className="btn-element">{element}</button>
             </p>
           ))}
         </p>
